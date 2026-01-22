@@ -14,7 +14,7 @@ from langchain_community.vectorstores import Chroma
 # Setup
 # -----------------------------
 load_dotenv()
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 os.makedirs("data", exist_ok=True)
 os.makedirs("chroma_db", exist_ok=True)
@@ -177,3 +177,4 @@ if query:
 
     with st.chat_message("assistant"):
         st.write(response.content)
+
